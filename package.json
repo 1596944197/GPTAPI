@@ -1,0 +1,16 @@
+{
+  "name": "gpt-api",
+  "version": "1.0.0",
+  "description": "封装的gpt-api",
+  "main": "./index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "MEI 1596944197@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "node-fetch": "^3.3.1"
+  }
+}
