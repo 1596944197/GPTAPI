@@ -1,8 +1,9 @@
 {
   "name": "gpt-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "封装的gpt-api",
   "main": "./index.mjs",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
