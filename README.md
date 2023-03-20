@@ -3,13 +3,13 @@
 ### how to install
 
 ```
-pnpm i GPT-API
+pnpm i gpt-api
 ```
 
 ### how to use
 
 ```
-import {createGptChat} from 'GPT-API'
+import {createGptChat} from 'gpt-api'
 const gpt = createGptChat({
   apiKey: 'your key',
   baseUrl: 'official or your proxy url',
