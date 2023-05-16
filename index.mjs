@@ -23,11 +23,12 @@ const params = {
 export const config = {
   apiKey: "",
   proxy: {},
+  baseUrl: "",
 };
 export function createGptChat(
   options = {
     apiKey: config.apiKey,
-    baseUrl: "",
+    baseUrl: config.baseUrl,
     model: "gpt-3.5-turbo",
   }
 ) {
@@ -88,11 +89,11 @@ export function createGptChat(
   };
 }
 
-async function createAudioTranscriptions({
+export async function createAudioTranscriptions({
   apiKey = config.apiKey,
   filePath = "",
   prompt = undefined,
-  format = "json", // json, text, srt, verbose_json, or vtt
+  format = "text", // json, text, srt, verbose_json, or vtt
   temperature = 0.7,
   output = "./audio.txt",
 }) {
@@ -114,7 +115,6 @@ async function createAudioTranscriptions({
         proxy: config.proxy,
       }
     );
-    // data type is string
     // @ts-ignore
     return writeFile(output, resp.data);
   } catch (error) {

@@ -4,7 +4,7 @@ export interface Message {
 }
 
 export interface Options {
-  apiKey: string;
+  apiKey?: string;
   baseUrl?: string;
   model?: string;
 }
@@ -30,3 +30,25 @@ export function sendMessage(
 ): Promise<string>;
 
 export function reset(params: typeof params): boolean;
+
+interface AudioTranscriptionsOptions {
+  apiKey?: config.apiKey;
+  filePath: string;
+  prompt?: undefined | string;
+  format?: "json" | "text" | "srt" | "verbose_json" | "vtt";
+  temperature?: number;
+  output?: string;
+}
+declare function createAudioTranscriptions(
+  options: AudioTranscriptionsOptions
+): Promise<void>;
+
+type GlobalConfig = {
+  apiKey?: string;
+  baseUrl?: string;
+  proxy?: {
+    host: string;
+    port: number;
+  };
+};
+declare const config: GlobalConfig;

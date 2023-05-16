@@ -9,7 +9,7 @@ pnpm i gpt-api
 ### how to use
 
 ```
-import {createGptChat,config} from 'gpt-api'
+import {createGptChat,config,createAudioTranscriptions} from 'gpt-api'
 // config is global config，can set apiKey and proxy
 
 // this api follow terminal agent
@@ -22,4 +22,11 @@ const gpt = createGptChat({
 const response =  await gpt.sendMessage('say you question')
 
 gpt.reset() // restart memory
+
+// create audio transcription
+createAudioTranscriptions({
+  filePath: './xxx.mp3',
+  output: './audio.txt'
+})
+// default return text
 ```
