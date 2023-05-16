@@ -9,7 +9,10 @@ pnpm i gpt-api
 ### how to use
 
 ```
-import {createGptChat} from 'gpt-api'
+import {createGptChat,config} from 'gpt-api'
+// config is global config，can set apiKey and proxy
+
+// this api follow terminal agent
 const gpt = createGptChat({
   apiKey: 'your key',
   baseUrl: 'official or your proxy url',

@@ -12,10 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "dayjs": "^1.11.7",
-    "node-fetch": "^3.3.1"
+    "node-fetch": "^3.3.1",
+    "openai": "^3.2.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/1596944197/GPTAPI.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.4"
   }
 }
