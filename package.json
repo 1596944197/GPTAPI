@@ -1,6 +1,6 @@
 {
   "name": "gpt-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "封装的gpt-api",
   "main": "./index.mjs",
   "types": "./index.d.ts",
